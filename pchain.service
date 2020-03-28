@@ -1,0 +1,17 @@
+[Unit]
+Description=Pchain Daemon
+After=network.target
+
+[Service]
+User=pchain
+Group=pchain
+WorkingDirectory=/home/pchain
+ExecStart=/home/pchain/bin/pchain --datadir=/home/pchain/.pchain --rpc --rpcapi=eth,web3,admin,tdm,miner,personal,chain,txpool,del --gcmode=archive --verbosity=1 --childChain=child_0
+Restart=on-failure
+
+# Specifies which signal to use when killing a service. Defaults to SIGTERM.
+# SIGHUP gives pchain time to exit cleanly before SIGKILL (default 90s)
+KillSignal=SIGHUP
+
+[Install]
+WantedBy=default.target
