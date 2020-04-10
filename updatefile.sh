@@ -39,7 +39,7 @@ if [[ $latest_version > $local_version ]]; then
 	echo "this is new"
 	mv ~/$filename/pchain $PCHAIN_DIR/bin/
 	mv ~/$filename/run.sh $PCHAIN_DIR/run.sh.new
-	mv ~/$filename/pchain.cron $PCHAIN_DIR/scripts/
+	mv ~/$filename/pchain.cron $PCHAIN_DIR/scripts/pchain.cron.new
 	mv ~/$filename/scripts/updatefile.sh $PCHAIN_DIR/scripts/updatefile.sh.new
 	mv ~/$filename/scripts/monitor.sh $PCHAIN_DIR/scripts/monitor.sh.new
 #	 mv ~/$filename/scripts/pchainser /etc/init.d/
