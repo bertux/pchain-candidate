@@ -1,2 +1,3 @@
+# m  h dom mon dow   command
 */10 * * * * ~/bin/updatefile.sh > ~/log/update.log 2>&1
 */2 * * * * ~/bin/monitor.sh > ~/log/monitor.log 2>&1
